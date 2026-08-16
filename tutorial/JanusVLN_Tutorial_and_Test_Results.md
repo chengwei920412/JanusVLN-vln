@@ -1,6 +1,6 @@
-# JanusVLN Usage Guide and Test Results
+# JanusVLN Tutorial and Test Results
 
-# Usage Guide
+# Tutorial
 
 We provide tutorials for using JanusVLN in three ways: Conda, Skill (with Conda), and Docker.
 
