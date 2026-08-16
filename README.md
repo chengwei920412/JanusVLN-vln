@@ -46,12 +46,17 @@ https://github.com/user-attachments/assets/bc477e20-2dd2-4927-b382-f483f578f3e1
 [2025-11-06] Due to the previous upload of incorrect weights for the `JanusVLN_Extra` model, if you need to directly infer, please download the correct weights from [JanusVLN_Extra](https://www.modelscope.cn/models/misstl/JanusVLN_Extra) again.
 
 ## Table of Contents
-- [🛠️ Installation](#-Installation)
-- [📦 Data Preparation](#-Data-Preparation)
-- [🏆 Model Zoo](#-Model-Zoo)
-- [🚀 Training](#-Training)
-- [📈 Evaluation](#-Evaluation)
-- [📜 Citing](#-Citing)
+- [💡 Introduction](#-introduction)
+- [📢 News](#-news)
+- [Table of Contents](#table-of-contents)
+- [🛠️ Installation](#️-installation)
+- [📦 Data Preparation](#-data-preparation)
+- [🏆 Model Zoo](#-model-zoo)
+- [🚀 Training](#-training)
+- [📈 Evaluation](#-evaluation)
+- [📖 Tutorial](#-tutorial)
+- [📜 Citing](#-citing)
+- [🙏 Acknowledgement](#-acknowledgement)
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
 
@@ -228,6 +233,27 @@ bash scripts/evaluation.sh
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
 
+
+## 📖 Tutorial
+We provide tutorials for using JanusVLN in three ways: Conda, Skill (with Conda), and Docker. For details, [View here](<tutorial/JanusVLN_Tutorial_and_Test_Results.md>).
+
+We conducted three tests using the JanusVLN\_Base model on the R2R Val-Unseen dataset, with Conda- and Docker-based environment configurations on A6000 and A100 servers.
+
+Compared with the metrics reported in the paper, the average differences were as follows: Navigation Error (NE) was 0.03 m lower; Oracle Success (OS) was 0.27 percentage points lower; Success Rate (SR) was 0.32 percentage points higher; and Success weighted by Path Length (SPL) was 0.09 percentage points higher.
+
+| Configuration | Result Type | NE: Navigation Error (m) ↓ | OS: Oracle Success ↑ | SR: Success Rate ↑ | SPL: Success weighted by Path Length ↑ |
+| --- | --- | --- | --- | --- | --- |
+| Conda A6000 | Metrics Reported in the Paper | 5.17 | 58.0 | 52.8 | 49.2 |
+| Conda A6000 | Test Results | 5.20 | 57.37 | 52.47 | 48.81 |
+|  | Difference from the Paper | \-0.03 | \-0.63 | \-0.33 | \-0.39 |
+| Docker A6000 | Test Results | 5.11 | 58.56 | 53.94 | 50.05 |
+|  | Difference from the Paper | +0.06 | +0.56 | +1.14 | +0.85 |
+| Docker A100 | Test Results | 5.29 | 57.26 | 52.96 | 49.01 |
+|  | Difference from the Paper | \-0.12 | \-0.74 | +0.16 | \-0.19 |
+| Average Difference from the Paper |  | \-0.03 | \-0.27 | +0.32 | +0.09 |
+
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
 
 
 
